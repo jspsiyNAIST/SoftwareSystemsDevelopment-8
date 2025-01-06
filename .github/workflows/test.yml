@@ -1,9 +1,9 @@
 name: Build and Publish Docker
- on:
+on:
   push:
     branches:
       - main
- jobs:
+jobs:
   test:
     runs-on: ubuntu-latest
     steps:
@@ -15,3 +15,4 @@ name: Build and Publish Docker
         run: npm test
         env:
           SQLITE_DB_LOCATION: /tmp/todo.db
+
